@@ -23,7 +23,11 @@ module.exports = configure(function (/* ctx */) {
     css: {
       loaderOptions: {
         postcss: {
-          plugins: [require("tailwindcss"), require("autoprefixer")],
+          plugins: [
+            require("tailwindcss"),
+            require("postcss-import"),
+            require("autoprefixer"),
+          ],
         },
       },
     },
@@ -60,10 +64,10 @@ module.exports = configure(function (/* ctx */) {
       },
       postcss: {
         plugins: [
-          require("tailwindcss")(
-            path.resolve(__dirname, "./tailwind.config.js")
+          require('tailwindcss')(
+            path.resolve(__dirname, './tailwind.config.js')
           ),
-          require("autoprefixer"),
+          require('autoprefixer'),
         ],
       },
       vueRouterMode: "hash", // available values: 'hash', 'history'

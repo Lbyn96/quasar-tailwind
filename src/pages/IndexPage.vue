@@ -1,17 +1,9 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
+  <div class="bg-white p-4 rounded shadow">
+    <input
+      type="text"
+      class="border-gray-300 focus:border-indigo-500 focus:ring focus:ring-indigo-200 rounded-md w-full"
+      placeholder="请输入搜索关键字"
     >
-  </q-page>
+  </div>
 </template>
-
-<script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'IndexPage'
-})
-</script>
